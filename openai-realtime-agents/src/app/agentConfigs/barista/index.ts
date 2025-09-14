@@ -1,4 +1,122 @@
 import { RealtimeAgent, tool } from '@openai/agents/realtime';
+import fs from 'fs';
+import path from 'path';
+
+// Load real menu data from menu.json
+function loadRealMenuData() {
+  try {
+    const menuPath = path.join(process.cwd(), 'menu.json');
+    const data = fs.readFileSync(menuPath, 'utf8');
+    return JSON.parse(data);
+  } catch (error) {
+    console.error('Error loading menu data:', error);
+    return { menu: [] };
+  }
+}
+
+// Calculate order total based on real menu prices
+function calculateOrderTotal(orderItems: any[]) {
+  const menuData = loadRealMenuData();
+  let total = 0;
+  const itemizedBreakdown: any[] = [];
+
+  for (const item of orderItems) {
+    const menuItem = menuData.menu.find((m: any) => 
+      m.name.toLowerCase().includes(item.name.toLowerCase()) ||
+      item.name.toLowerCase().includes(m.name.toLowerCase())
+    );
+
+    if (menuItem) {
+      let itemTotal = menuItem.base_price;
+      let itemBreakdown = {
+        name: menuItem.name,
+        base_price: menuItem.base_price,
+        options: [] as Array<{name: string, price_diff: number}>,
+        total: 0
+      };
+
+      // Add size price difference
+      if (item.size && menuItem.options?.Size) {
+        const sizeOption = menuItem.options.Size.choices.find((choice: any) => 
+          choice.name.toLowerCase() === item.size.toLowerCase()
+        );
+        if (sizeOption) {
+          itemTotal += sizeOption.price_diff;
+          itemBreakdown.options.push({
+            name: `Size: ${sizeOption.name}`,
+            price_diff: sizeOption.price_diff
+          });
+        }
+      }
+
+      // Add alternative milk price difference
+      if (item.alternative_milk && menuItem.options?.['Alternative Milk']) {
+        const milkOption = menuItem.options['Alternative Milk'].choices.find((choice: any) => 
+          choice.name.toLowerCase() === item.alternative_milk.toLowerCase()
+        );
+        if (milkOption) {
+          itemTotal += milkOption.price_diff;
+          itemBreakdown.options.push({
+            name: `Milk: ${milkOption.name}`,
+            price_diff: milkOption.price_diff
+          });
+        }
+      }
+
+      // Add extras price differences
+      if (item.extras && Array.isArray(item.extras)) {
+        for (const extra of item.extras) {
+          if (menuItem.options?.Extras) {
+            const extraOption = menuItem.options.Extras.choices.find((choice: any) => 
+              choice.name.toLowerCase() === extra.toLowerCase()
+            );
+            if (extraOption) {
+              itemTotal += extraOption.price_diff;
+              itemBreakdown.options.push({
+                name: `Extra: ${extraOption.name}`,
+                price_diff: extraOption.price_diff
+              });
+            }
+          }
+        }
+      }
+
+      // Add cold foam price differences
+      if (item.cold_foam && menuItem.options?.['Cold Foam']) {
+        const foamOption = menuItem.options['Cold Foam'].choices.find((choice: any) => 
+          choice.name.toLowerCase() === item.cold_foam.toLowerCase()
+        );
+        if (foamOption) {
+          itemTotal += foamOption.price_diff;
+          itemBreakdown.options.push({
+            name: `Cold Foam: ${foamOption.name}`,
+            price_diff: foamOption.price_diff
+          });
+        }
+      }
+
+      itemBreakdown.total = itemTotal;
+      itemizedBreakdown.push(itemBreakdown);
+      total += itemTotal;
+    } else {
+      // Fallback to basic pricing if item not found in real menu
+      itemizedBreakdown.push({
+        name: item.name,
+        base_price: item.base_price || 0,
+        options: [],
+        total: item.base_price || 0
+      });
+      total += item.base_price || 0;
+    }
+  }
+
+  return {
+    total: Math.round(total * 100) / 100, // Round to 2 decimal places
+    itemizedBreakdown,
+    tax: Math.round(total * 0.0875 * 100) / 100, // 8.75% tax
+    finalTotal: Math.round((total + total * 0.0875) * 100) / 100
+  };
+}
 
 // Menu data for Shotted Coffee
 const menu = {
@@ -454,8 +572,10 @@ You know our complete menu:
 
 ## Important Notes
 - Always use getMenu with category "all" when showing the menu
+- Use getOrderTotal to calculate accurate pricing before presenting totals to customers
 - After each item, suggest relevant upsells or add-ons
 - Always ask "Anything else?" before finalizing the order
+- Present clear pricing breakdown: "That'll be $X.XX total (subtotal: $X.XX + tax: $X.XX)"
 - Confirm the complete order before processing
 - Keep responses under 2 sentences unless they ask for details
 - Sound like you're actually working a busy coffee shop
@@ -610,6 +730,50 @@ You know our complete menu:
     }),
 
     tool({
+      name: 'getOrderTotal',
+      description: 'Calculate the total cost of an order including all items, sizes, modifiers, and tax based on real menu prices',
+      parameters: {
+        type: 'object',
+        properties: {
+          order_items: {
+            type: 'array',
+            items: {
+              type: 'object',
+              properties: {
+                name: { type: 'string', description: 'Name of the menu item' },
+                size: { type: 'string', description: 'Size selected (e.g., Regular, Medium, Large)' },
+                alternative_milk: { type: 'string', description: 'Alternative milk option if selected' },
+                extras: { 
+                  type: 'array', 
+                  items: { type: 'string' },
+                  description: 'Array of extra options selected'
+                },
+                cold_foam: { type: 'string', description: 'Cold foam option if selected' },
+                quantity: { type: 'number', description: 'Quantity of this item', default: 1 }
+              },
+              required: ['name']
+            },
+            description: 'Array of items in the order'
+          }
+        },
+        required: ['order_items'],
+        additionalProperties: false
+      },
+      execute: async (input: any) => {
+        const { order_items } = input as { order_items: any[] };
+        const calculation = calculateOrderTotal(order_items);
+        
+        return {
+          subtotal: calculation.total,
+          tax: calculation.tax,
+          total: calculation.finalTotal,
+          itemized_breakdown: calculation.itemizedBreakdown,
+          summary: `Subtotal: $${calculation.total.toFixed(2)} | Tax: $${calculation.tax.toFixed(2)} | Total: $${calculation.finalTotal.toFixed(2)}`
+        };
+      }
+    }),
+
+    tool({
       name: 'submitOrder',
       description: 'Submit an order to Square (stubbed - will print the API request instead of actually submitting)',
       parameters: {
@@ -653,6 +817,17 @@ You know our complete menu:
           }>;
           pickup_time: string;
         };
+        
+        // Convert items to the format expected by calculateOrderTotal
+        const orderItems = items.map(item => ({
+          name: item.item_name,
+          size: item.size,
+          extras: item.modifiers,
+          quantity: item.quantity
+        }));
+        
+        // Calculate total using real menu prices
+        const calculation = calculateOrderTotal(orderItems);
         
         // Generate Square API request (stubbed)
         const squareRequest = {
@@ -733,7 +908,11 @@ You know our complete menu:
         return {
           success: true,
           order_id: squareRequest.idempotency_key,
-          message: `Order submitted successfully! Your order ID is ${squareRequest.idempotency_key}. The Square API request has been printed to the console.`,
+          subtotal: calculation.total,
+          tax: calculation.tax,
+          total: calculation.finalTotal,
+          itemized_breakdown: calculation.itemizedBreakdown,
+          message: `Order submitted successfully! Your order ID is ${squareRequest.idempotency_key}. Total: $${calculation.finalTotal.toFixed(2)} (Subtotal: $${calculation.total.toFixed(2)} + Tax: $${calculation.tax.toFixed(2)}). The Square API request has been printed to the console.`,
           square_request: squareRequest
         };
       }
