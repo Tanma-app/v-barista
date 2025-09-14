@@ -1,5 +1,5 @@
 {
-  "menu": [
+  "coffee": [
     {
       "name": "Iced Pistachio",
       "base_price": 6.5,
@@ -1113,7 +1113,9 @@
         },
         "Add a note": {"required": false}
       }
-    },
+    }
+  ],
+  "pastries": [
     {
       "name": "Walnut Chocolate Chip Cookies",
       "base_price": 3.5,
@@ -1240,6 +1242,11 @@
         "Add a note": {"required": false}
       }
     }
-  ]
+  ],
+  "donuts": [],
+  "beverages": [],
+  "snacks": [],
+  "kitchen_menu": [],
+  "specialty_drinks": []
 }
 

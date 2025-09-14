@@ -10,7 +10,15 @@ function loadRealMenuData() {
     return JSON.parse(data);
   } catch (error) {
     console.error('Error loading menu data:', error);
-    return { menu: [] };
+    return { 
+      coffee: [],
+      pastries: [],
+      donuts: [],
+      beverages: [],
+      snacks: [],
+      kitchen_menu: [],
+      specialty_drinks: []
+    };
   }
 }
 
@@ -21,10 +29,22 @@ function calculateOrderTotal(orderItems: any[]) {
   const itemizedBreakdown: any[] = [];
 
   for (const item of orderItems) {
-    const menuItem = menuData.menu.find((m: any) => 
-      m.name.toLowerCase().includes(item.name.toLowerCase()) ||
-      item.name.toLowerCase().includes(m.name.toLowerCase())
-    );
+    let menuItem = null;
+    
+    // Search through all categories for the item
+    for (const category of Object.keys(menuData)) {
+      const items = menuData[category as keyof typeof menuData];
+      if (Array.isArray(items)) {
+        const foundItem = items.find((m: any) => 
+          m.name.toLowerCase().includes(item.name.toLowerCase()) ||
+          item.name.toLowerCase().includes(m.name.toLowerCase())
+        );
+        if (foundItem) {
+          menuItem = foundItem;
+          break;
+        }
+      }
+    }
 
     if (menuItem) {
       let itemTotal = menuItem.base_price;
@@ -122,47 +142,7 @@ function calculateOrderTotal(orderItems: any[]) {
 export async function GET() {
   try {
     const menuData = loadRealMenuData();
-    
-    // Convert flat menu array to categorized structure for admin panel
-    const categorizedMenu = {
-      coffee: [] as any[],
-      pastries: [] as any[],
-      donuts: [] as any[],
-      beverages: [] as any[],
-      snacks: [] as any[],
-      kitchen_menu: [] as any[],
-      specialty_drinks: [] as any[]
-    };
-    
-    // Categorize items based on their names/descriptions
-    menuData.menu.forEach((item: any) => {
-      const name = item.name.toLowerCase();
-      const description = item.description.toLowerCase();
-      
-      if (name.includes('coffee') || name.includes('latte') || name.includes('cappuccino') || 
-          name.includes('americano') || name.includes('espresso') || name.includes('mocha') ||
-          name.includes('cold brew') || name.includes('iced') || name.includes('hot')) {
-        categorizedMenu.coffee.push(item);
-      } else if (name.includes('cookie') || name.includes('brownie') || name.includes('danish') ||
-                 name.includes('croissant') || name.includes('muffin') || name.includes('pastry') ||
-                 name.includes('baklava') || name.includes('palmier')) {
-        categorizedMenu.pastries.push(item);
-      } else if (name.includes('donut') || name.includes('basbosa')) {
-        categorizedMenu.donuts.push(item);
-      } else if (name.includes('water') || name.includes('juice') || name.includes('soda') ||
-                 name.includes('tea') || name.includes('lemonade')) {
-        categorizedMenu.beverages.push(item);
-      } else if (name.includes('bites') || name.includes('taboulla') || name.includes('hummus')) {
-        categorizedMenu.snacks.push(item);
-      } else if (name.includes('wrap') || name.includes('sandwich') || name.includes('toast') ||
-                 name.includes('avocado') || name.includes('salmon') || name.includes('tuna')) {
-        categorizedMenu.kitchen_menu.push(item);
-      } else {
-        categorizedMenu.specialty_drinks.push(item);
-      }
-    });
-    
-    return NextResponse.json(categorizedMenu);
+    return NextResponse.json(menuData);
   } catch (error) {
     console.error('Error retrieving menu data:', error);
     return NextResponse.json(
