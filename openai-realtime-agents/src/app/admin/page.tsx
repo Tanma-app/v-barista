@@ -3,13 +3,14 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
 interface MenuItem {
-  id: string;
+  id?: string;
   name: string;
   description: string;
   base_price: number;
-  category: string;
+  category?: string;
   sizes?: Array<{ name: string; price_modifier: number }>;
   modifiers?: Array<{ name: string; price: number }>;
+  options?: any;
 }
 
 interface MenuData {
@@ -66,7 +67,7 @@ const AdminPage = () => {
 
   const loadMenuData = async () => {
     try {
-      const response = await fetch('/api/menu');
+      const response = await fetch('/api/menu-data');
       const data = await response.json();
       setMenuData(data);
     } catch (error) {
@@ -97,7 +98,8 @@ const AdminPage = () => {
       base_price: formData.base_price,
       category: selectedCategory,
       sizes: formData.sizes || [],
-      modifiers: formData.modifiers || []
+      modifiers: formData.modifiers || [],
+      options: {}
     };
 
     const updatedMenu = {
@@ -129,11 +131,13 @@ const AdminPage = () => {
     resetForm();
   };
 
-  const handleDeleteItem = (itemId: string) => {
+  const handleDeleteItem = (itemId: string, itemIndex: number) => {
     if (confirm('Are you sure you want to delete this item?')) {
       const updatedMenu = {
         ...menuData,
-        [selectedCategory]: menuData[selectedCategory as keyof MenuData].filter(item => item.id !== itemId)
+        [selectedCategory]: menuData[selectedCategory as keyof MenuData].filter((item, index) => 
+          item.id ? item.id !== itemId : index !== itemIndex
+        )
       };
 
       saveMenuData(updatedMenu);
@@ -268,8 +272,8 @@ const AdminPage = () => {
               </div>
 
               <div className="divide-y divide-gray-200">
-                {currentItems.map((item) => (
-                  <div key={item.id} className="p-6 hover:bg-gray-50">
+                {currentItems.map((item, index) => (
+                  <div key={item.id || `item-${index}`} className="p-6 hover:bg-gray-50">
                     <div className="flex justify-between items-start">
                       <div className="flex-1">
                         <h3 className="text-lg font-medium text-gray-900">{item.name}</h3>
@@ -298,7 +302,7 @@ const AdminPage = () => {
                           Edit
                         </button>
                         <button
-                          onClick={() => handleDeleteItem(item.id)}
+                          onClick={() => handleDeleteItem(item.id || '', index)}
                           className="text-red-600 hover:text-red-800 px-3 py-1 rounded text-sm font-medium"
                         >
                           Delete

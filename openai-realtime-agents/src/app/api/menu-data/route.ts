@@ -122,7 +122,47 @@ function calculateOrderTotal(orderItems: any[]) {
 export async function GET() {
   try {
     const menuData = loadRealMenuData();
-    return NextResponse.json(menuData);
+    
+    // Convert flat menu array to categorized structure for admin panel
+    const categorizedMenu = {
+      coffee: [] as any[],
+      pastries: [] as any[],
+      donuts: [] as any[],
+      beverages: [] as any[],
+      snacks: [] as any[],
+      kitchen_menu: [] as any[],
+      specialty_drinks: [] as any[]
+    };
+    
+    // Categorize items based on their names/descriptions
+    menuData.menu.forEach((item: any) => {
+      const name = item.name.toLowerCase();
+      const description = item.description.toLowerCase();
+      
+      if (name.includes('coffee') || name.includes('latte') || name.includes('cappuccino') || 
+          name.includes('americano') || name.includes('espresso') || name.includes('mocha') ||
+          name.includes('cold brew') || name.includes('iced') || name.includes('hot')) {
+        categorizedMenu.coffee.push(item);
+      } else if (name.includes('cookie') || name.includes('brownie') || name.includes('danish') ||
+                 name.includes('croissant') || name.includes('muffin') || name.includes('pastry') ||
+                 name.includes('baklava') || name.includes('palmier')) {
+        categorizedMenu.pastries.push(item);
+      } else if (name.includes('donut') || name.includes('basbosa')) {
+        categorizedMenu.donuts.push(item);
+      } else if (name.includes('water') || name.includes('juice') || name.includes('soda') ||
+                 name.includes('tea') || name.includes('lemonade')) {
+        categorizedMenu.beverages.push(item);
+      } else if (name.includes('bites') || name.includes('taboulla') || name.includes('hummus')) {
+        categorizedMenu.snacks.push(item);
+      } else if (name.includes('wrap') || name.includes('sandwich') || name.includes('toast') ||
+                 name.includes('avocado') || name.includes('salmon') || name.includes('tuna')) {
+        categorizedMenu.kitchen_menu.push(item);
+      } else {
+        categorizedMenu.specialty_drinks.push(item);
+      }
+    });
+    
+    return NextResponse.json(categorizedMenu);
   } catch (error) {
     console.error('Error retrieving menu data:', error);
     return NextResponse.json(
