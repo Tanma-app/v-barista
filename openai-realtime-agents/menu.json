@@ -1,0 +1,1245 @@
+{
+  "menu": [
+    {
+      "name": "Iced Pistachio",
+      "base_price": 6.5,
+      "description": "A mixture of Espresso Shots and our secret unique Pistachio sauce. Sweet & Delicious.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 0.9},
+            {"name": "Large", "price_diff": 1.8}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Pistachio", "price_diff": 1.5},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Less Sweet", "price_diff": 0},
+            {"name": "Less Ice", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "No Ice", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Spanish",
+      "base_price": 5.6,
+      "description": "Shotted Signature Spanish Latte, Sweet & Creamy Condensed Milk. 2 Shots for Regular, 4 shots for Large",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 0},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Small Saratoga Water",
+      "base_price": 3.5,
+      "options": { "Add a note": {"required": false} }
+    },
+    {
+      "name": "Iced Almonado",
+      "base_price": 6,
+      "description": "",
+      "options": {}
+    },
+
+    {
+      "name": "Iced Red Velvet",
+      "base_price": 5.6,
+      "description": "Signature Shotted Red Velvet Latte; chocolate yet smooth and sweet.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Matcha Latte",
+      "base_price": 6.3,
+      "description": "Chamellia Matcha Green Tea Latte mix with customizable berry and sweetness options.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 0.9},
+            {"name": "Large", "price_diff": 1.8}
+          ]
+        },
+        "Berry Matcha": {
+          "required": false,
+          "choices": [
+            {"name": "Strawberry", "price_diff": 1},
+            {"name": "Blueberry", "price_diff": 1}
+          ]
+        },
+        "Matcha Sweetness": {
+          "required": false,
+          "choices": [
+            {"name": "Unsweet Matcha", "price_diff": 0},
+            {"name": "Sweet Matcha", "price_diff": 0},
+            {"name": "Rose", "price_diff": 0},
+            {"name": "Lavender", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Rose",
+      "base_price": 5.6,
+      "description": "Floral, flavorful, not too sweet.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Latte",
+      "base_price": 5.5,
+      "description": "Double shot of espresso with choice of milk.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Pistachio", "price_diff": 1.5},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Less Sweet", "price_diff": 0},
+            {"name": "Less Ice", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "No Ice", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Caramel Latte",
+      "base_price": 5.6,
+      "description": "Caramel mixed with a double shot of espresso topped with choice of milk.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Pistachio", "price_diff": 1.5},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Less Sweet", "price_diff": 0},
+            {"name": "Less Ice", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "No Ice", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Vanilla Latte",
+      "base_price": 5.6,
+      "description": "Vanilla mixed with a double shot of espresso.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Chai Latte",
+      "base_price": 5.6,
+      "description": "Classic Chai Latte prepared by cinnamon concentrate and topped with cinnamon.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Pistachio", "price_diff": 1.5},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Less Sweet", "price_diff": 0},
+            {"name": "Less Ice", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "No Ice", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Mocha",
+      "base_price": 5.6,
+      "description": "Chocolate latte with smooth sweetness.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+    {
+      "name": "Iced Pumpkin Spice Latte",
+      "base_price": 5.6,
+      "description": "Pumpkin spiced latte with espresso and steamed milk.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false},
+        "Cold Foam": {
+          "required": false,
+          "choices": [
+            {"name": "Vanilla Cold Foam", "price_diff": 1},
+            {"name": "Pumpkin Cream", "price_diff": 1},
+            {"name": "Pistachio Cold Foam", "price_diff": 1.85},
+            {"name": "Lavender Cold Foam", "price_diff": 1},
+            {"name": "Chocolate Cold Foam", "price_diff": 1},
+            {"name": "Caramel Cold Foam", "price_diff": 1},
+            {"name": "Rose Cold Foam", "price_diff": 1},
+            {"name": "Matcha Cold Foam", "price_diff": 1},
+            {"name": "Red Velvet Foam", "price_diff": 0}
+          ]
+        }
+      }
+    },
+
+    {
+      "name": "Pistachio Latte",
+      "base_price": 6.5,
+      "description": "A mixture of Espresso Shots and our secret unique Pistachio sauce. Sweet & Delicious.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Pistachio", "price_diff": 1.5},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Less Sweet", "price_diff": 0},
+            {"name": "Less Ice", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "No Ice", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Red Velvet Latte",
+      "base_price": 5.6,
+      "description": "Signature Shotted Red Velvet Latte; chocolate yet smooth and sweet.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Rose Latte",
+      "base_price": 5.6,
+      "description": "Shotted Signature Rose Latte, Floral & Smooth. 2 Shots for Regular, 4 shots for Large.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Caramel Latte",
+      "base_price": 5.6,
+      "description": "Caramel sauce mixed with double shot of espresso topped with steamed milk.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Vanilla Latte",
+      "base_price": 5.6,
+      "description": "Shotted classic vanilla latte, sweet and smooth.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Mocha Latte",
+      "base_price": 5.6,
+      "description": "Shotted Mocha Latte; a chocolate, smooth and sweet latte.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Matcha Latte (Warm)",
+      "base_price": 5.6,
+      "description": "Warm matcha latte with customizable sweetness and flavors.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Matcha Sweetness": {
+          "required": false,
+          "choices": [
+            {"name": "Sweet Matcha", "price_diff": 0},
+            {"name": "Rose", "price_diff": 0},
+            {"name": "Lavender", "price_diff": 0}
+          ]
+        },
+        "Dairy": {
+          "required": false,
+          "choices": [
+            {"name": "2% Milk", "price_diff": 0},
+            {"name": "Lactose Free", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Hot Chocolate",
+      "base_price": 5.6,
+      "description": "Hot chocolate drink.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Latte",
+      "base_price": 5.6,
+      "description": "Classic latte with steamed milk and espresso.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Cappuccino",
+      "base_price": 4.8,
+      "description": "Cappuccino with espresso and steamed milk foam.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Small", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large 16oz", "price_diff": 2.35},
+            {"name": "Mug", "price_diff": 0}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Cortado",
+      "base_price": 4.6,
+      "description": "Cortado served in a regular cup or glass cup.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Glass Cup", "price_diff": 1.15}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0},
+            {"name": "Extra Pistachio", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Flat White",
+      "base_price": 4.8,
+      "description": "Flat white espresso drink.",
+      "options": {
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Pumpkin Spice Latte (Warm)",
+      "base_price": 5.6,
+      "description": "Pumpkin spice latte served warm with espresso.",
+      "options": {
+        "Size": {
+          "required": true,
+          "choices": [
+            {"name": "Regular", "price_diff": 0},
+            {"name": "Medium", "price_diff": 1.15},
+            {"name": "Large", "price_diff": 2.35}
+          ]
+        },
+        "Alternative Milk": {
+          "required": false,
+          "choices": [
+            {"name": "Oat Milk", "price_diff": 1},
+            {"name": "Lactose Free", "price_diff": 1},
+            {"name": "Almond Milk", "price_diff": 1}
+          ]
+        },
+        "Extras": {
+          "required": false,
+          "choices": [
+            {"name": "Extra Sweet", "price_diff": 1},
+            {"name": "Light Sweet", "price_diff": 0},
+            {"name": "Decaf", "price_diff": 0},
+            {"name": "1/2 Caff", "price_diff": 0},
+            {"name": "Extra Shot", "price_diff": 1},
+            {"name": "Single Shot", "price_diff": 0},
+            {"name": "Extra Hot", "price_diff": 0},
+            {"name": "Light Ice", "price_diff": 0},
+            {"name": "Extra Ice", "price_diff": 0},
+            {"name": "No Foam", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Walnut Chocolate Chip Cookies",
+      "base_price": 3.5,
+      "description": "Classic Walnut Chocolate Chip Cookies, Freshly Made by our Bakery Team at Shotted Coffee.",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Maple Danish",
+      "base_price": 4.25,
+      "description": "Maple Danish Pastry.",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Blueberry Cheesecake Danish",
+      "base_price": 4.25,
+      "description": "Blueberry cheesecake Danish.",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Mini Salted Caramel Danish",
+      "base_price": 2.8,
+      "description": "Mini salted caramel Danish (out of stock).",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Raspberry Danish",
+      "base_price": 4.25,
+      "description": "Raspberry Danish Pastry.",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Brownie",
+      "base_price": 4.0,
+      "description": "Classic Brownie, Freshly Made by our Bakery Team at Shotted Coffee (currently out of stock).",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Toppings": {
+          "required": false,
+          "choices": [
+            {"name": "Pistachio topping", "price_diff": 1.5}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Butter Leek Parmesan Pastry",
+      "base_price": 2.75,
+      "description": "Savory butter leek parmesan pastry (out of stock).",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    },
+    {
+      "name": "Chocolate Avalanche Danish",
+      "base_price": 4.25,
+      "description": "Chocolate avalanche Danish (out of stock).",
+      "options": {
+        "For here/to go": {
+          "required": true,
+          "choices": [
+            {"name": "For here", "price_diff": 0},
+            {"name": "To go", "price_diff": 0}
+          ]
+        },
+        "Add a note": {"required": false}
+      }
+    }
+  ]
+}
+

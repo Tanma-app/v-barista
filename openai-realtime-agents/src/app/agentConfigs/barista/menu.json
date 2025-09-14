@@ -1,0 +1,200 @@
+{
+  "coffee": [
+    {
+      "id": "latte",
+      "name": "Latte",
+      "description": "Rich espresso with steamed milk and a light layer of foam",
+      "base_price": 4.50,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Extra Shot", "price": 0.75 },
+        { "name": "Decaf", "price": 0 },
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 },
+        { "name": "Extra Foam", "price": 0 },
+        { "name": "No Foam", "price": 0 }
+      ]
+    },
+    {
+      "id": "cappuccino",
+      "name": "Cappuccino",
+      "description": "Equal parts espresso, steamed milk, and foam",
+      "base_price": 4.25,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Extra Shot", "price": 0.75 },
+        { "name": "Decaf", "price": 0 },
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 }
+      ]
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "description": "Espresso with hot water",
+      "base_price": 3.75,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Extra Shot", "price": 0.75 },
+        { "name": "Decaf", "price": 0 },
+        { "name": "Room for Cream", "price": 0 }
+      ]
+    },
+    {
+      "id": "espresso",
+      "name": "Espresso",
+      "description": "Single shot of our premium espresso",
+      "base_price": 2.50,
+      "sizes": [
+        { "name": "Single Shot", "price_modifier": 0 },
+        { "name": "Double Shot", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Decaf", "price": 0 }
+      ]
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha",
+      "description": "Espresso with chocolate and steamed milk",
+      "base_price": 5.25,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Extra Shot", "price": 0.75 },
+        { "name": "Decaf", "price": 0 },
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 },
+        { "name": "Extra Chocolate", "price": 0.50 },
+        { "name": "Whipped Cream", "price": 0.75 }
+      ]
+    },
+    {
+      "id": "cold_brew",
+      "name": "Cold Brew",
+      "description": "Smooth, cold-steeped coffee",
+      "base_price": 4.00,
+      "sizes": [
+        { "name": "Small (12oz)", "price_modifier": 0 },
+        { "name": "Medium (16oz)", "price_modifier": 0.50 },
+        { "name": "Large (20oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 },
+        { "name": "Vanilla Syrup", "price": 0.50 },
+        { "name": "Caramel Syrup", "price": 0.50 }
+      ]
+    }
+  ],
+  "food": [
+    {
+      "id": "croissant",
+      "name": "Butter Croissant",
+      "description": "Freshly baked, flaky croissant",
+      "base_price": 3.50,
+      "modifiers": [
+        { "name": "Warmed", "price": 0 }
+      ]
+    },
+    {
+      "id": "chocolate_croissant",
+      "name": "Chocolate Croissant",
+      "description": "Buttery croissant filled with rich chocolate",
+      "base_price": 4.25,
+      "modifiers": [
+        { "name": "Warmed", "price": 0 }
+      ]
+    },
+    {
+      "id": "bagel",
+      "name": "Everything Bagel",
+      "description": "Fresh bagel with everything seasoning",
+      "base_price": 2.75,
+      "modifiers": [
+        { "name": "Cream Cheese", "price": 1.50 },
+        { "name": "Warmed", "price": 0 }
+      ]
+    },
+    {
+      "id": "muffin",
+      "name": "Blueberry Muffin",
+      "description": "Fresh baked muffin with blueberries",
+      "base_price": 3.25,
+      "modifiers": [
+        { "name": "Warmed", "price": 0 }
+      ]
+    },
+    {
+      "id": "avocado_toast",
+      "name": "Avocado Toast",
+      "description": "Smashed avocado on sourdough with sea salt",
+      "base_price": 8.50,
+      "modifiers": [
+        { "name": "Add Egg", "price": 2.00 },
+        { "name": "Add Tomato", "price": 1.50 }
+      ]
+    }
+  ],
+  "specialty_drinks": [
+    {
+      "id": "dirty_chai",
+      "name": "Dirty Chai",
+      "description": "Chai latte with a shot of espresso",
+      "base_price": 5.50,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Extra Shot", "price": 0.75 },
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 }
+      ]
+    },
+    {
+      "id": "matcha_latte",
+      "name": "Matcha Latte",
+      "description": "Ceremonial grade matcha with steamed milk",
+      "base_price": 5.00,
+      "sizes": [
+        { "name": "Small (8oz)", "price_modifier": 0 },
+        { "name": "Medium (12oz)", "price_modifier": 0.50 },
+        { "name": "Large (16oz)", "price_modifier": 1.00 }
+      ],
+      "modifiers": [
+        { "name": "Oat Milk", "price": 0.50 },
+        { "name": "Almond Milk", "price": 0.50 },
+        { "name": "Soy Milk", "price": 0.50 },
+        { "name": "Coconut Milk", "price": 0.50 },
+        { "name": "Vanilla Syrup", "price": 0.50 }
+      ]
+    }
+  ]
+}
