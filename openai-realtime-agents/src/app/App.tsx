@@ -458,6 +458,12 @@ function App() {
           </div>
         </div>
         <div className="flex items-center">
+          <a
+            href="/admin"
+            className="bg-gray-600 text-white px-3 py-1 rounded-lg text-sm hover:bg-gray-700 transition-colors mr-4"
+          >
+            Admin
+          </a>
           <label className="flex items-center text-base gap-1 mr-2 font-medium">
             Scenario
           </label>
